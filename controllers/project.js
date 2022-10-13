@@ -81,7 +81,7 @@ var controller = {
         Project.findByIdAndRemove(projectId, (err, projectRemoved) => {
             if(err) return res.status(500).send({message: 'error al eliminar'});
             if(!projectRemoved) return res.status(404).send({message: 'el proyecto no fue encontrado'});
-            return res.status(200).send({project: projectUpdated});
+            return res.status(200).send({project: projectRemoved});
         });
     },
 
